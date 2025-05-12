@@ -223,17 +223,19 @@
   }
 }
 
-/* Samsung Galaxy Tab S9 Plus (Landscape - 2560x1600) - Compact Search */
+/* Samsung Galaxy Tab S9 Plus (Landscape - 2560x1600) */
 @media (min-width: 1024px) and (max-width: 1600px) and (orientation: landscape) {
   .search-container {
     max-width: 330px;
     height: 38px;
+    position: relative;
+    margin: 0 auto; /* Center the search bar */
   }
 
   .search-input {
     padding: 0 12px 0 36px;
     font-size: 14px;
-    border-radius: 19px; /* Half of height for perfect rounded corners */
+    border-radius: 19px;
   }
 
   .search-icon {
@@ -243,8 +245,10 @@
   }
 
   .search-results {
-    width: 110%; /* Slightly wider than container */
-    top: 42px; /* Position below search bar */
+    width: 330px; /* Match search bar width */
+    left: 50%;
+    transform: translateX(-50%); /* Center results */
+    top: 42px;
     max-height: 350px;
     border-radius: 12px;
   }
@@ -256,7 +260,7 @@
 
   .search-result-item img {
     width: 36px;
-    height: 54px; /* 1.5x width for poster aspect ratio */
+    height: 54px;
   }
 
   .result-title {
@@ -265,12 +269,17 @@
 
   .result-subtitle {
     font-size: 12px;
-    margin-top: 2px;
   }
 
-  /* Scrollbar adjustments */
-  .search-results::-webkit-scrollbar {
-    width: 5px;
+  /* Ensure results appear above other content */
+  .search-results {
+    z-index: 1001;
+  }
+
+  /* Adjust for when search is active */
+  .search-input:focus {
+    box-shadow: 0 0 0 2px rgba(9, 61, 233, 0.2);
+    border-color: #0077ffd5;
   }
 }
 
