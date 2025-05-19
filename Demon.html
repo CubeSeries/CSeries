@@ -947,16 +947,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
   </script>
-  <script>
-    // Wait for iframe to load
-    document.getElementById('kdramaIframe').onload = function() {
-      // Send a message to the iframe with scaling instructions
-      this.contentWindow.postMessage({
-        type: 'resizeImages',
-        width: 50,  // Your desired width
-        height: 20  // Your desired height
-      }, '*');
-    };
-  </script>
 </body>
 </html>
