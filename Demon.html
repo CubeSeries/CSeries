@@ -592,14 +592,20 @@ nav {
     white-space: nowrap;
   }
 
-  .selector-iframe {
-    width: 250%;           /* fit container width */
-    height: 230px;         /* smaller height */
-    transform: scale(1);   /* remove scaling to prevent cut off */
-    margin: 0 5px 20px 0;    /* add bottom margin gap */
-    margin-left: 0;        /* reset negative margin */
-    position: static;      /* reset positioning */
-  }
+.selector-iframe {
+  width: 100%;          /* Use full container width */
+  max-width: 500px;     /* Or any max width you want */
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  transform: scale(0.85); /* Slight scale to fit content better */
+  transform-origin: center center; /* Scale from center */
+  margin: 0 10px 20px 10px;  /* Horizontal gap + bottom gap */
+  display: inline-block;      /* To respect margins */
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}
 }
 
 
