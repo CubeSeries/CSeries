@@ -575,16 +575,20 @@ nav {
 
 /* ===== MEDIA QUERIES FOR RESPONSIVENESS ===== */
 /* Samsung Tab S9 Plus Landscape (1600px width) */
-@media only screen and (min-width: 900px) and (orientation: landscape) {
-
+@media only screen 
+  and (min-device-width: 1280px) 
+  and (max-device-width: 2800px) 
+  and (orientation: landscape) 
+  and (max-width: 1024px) {
+    
   .playlist-card {
     width: 320px;
     position: fixed;
-    height: 280px;
+    height: 580px;
   }
 
   .red-btn, .discord-btn {
-    margin-left: 255px;
+    margin-left: 400px;
     padding: 8px 16px;
     white-space: nowrap;
   }
