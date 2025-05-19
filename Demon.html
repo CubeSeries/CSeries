@@ -573,6 +573,123 @@ nav {
 }
 
 
+/* ===== MEDIA QUERIES FOR RESPONSIVENESS ===== */
+
+/* Medium Devices (tablets and small laptops) */
+@media (max-width: 1024px) {
+  body {
+    padding-left: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .playlist-card {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .video-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .content-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .searchbar-container {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Small Devices (phones) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  .searchbar-container {
+    margin-top: 10px;
+  }
+
+  .red-btn, .discord-btn {
+    margin-left: 0;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .selector-iframe {
+    width: 100%;
+    transform: scale(1);
+    margin-left: 0;
+    margin-bottom: 20px;
+    height: 260px;
+  }
+
+  .youtube-iframe {
+    height: 200px;
+  }
+
+  .spotify-iframe {
+    height: 300px;
+  }
+}
+
+/* Extra Small Devices (very small phones) */
+@media (max-width: 480px) {
+  .playlist-title,
+  .selector-title,
+  .video-title {
+    font-size: 18px;
+  }
+
+  .promo-card {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px;
+  }
+
+  .promo-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .review-section,
+  .selector-container,
+  .video-container {
+    padding: 16px;
+  }
+
+  .section-title::after,
+  .video-title::after,
+  .selector-title::after {
+    width: 120px;
+  }
+}
+
+/* High-resolution displays fix */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+  .logo-cube::before {
+    transform: scale(1.1);
+  }
+}
+
 
   </style>
 
