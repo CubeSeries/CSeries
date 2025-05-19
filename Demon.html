@@ -574,7 +574,65 @@ nav {
 
 
 /* ===== MEDIA QUERIES FOR RESPONSIVENESS ===== */
-/* ===== MEDIA QUERIES FOR RESPONSIVENESS ===== */
+/* Samsung Tab S9 Plus Landscape (1600px width) */
+@media only screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 1600px) 
+  and (orientation: landscape) {
+  
+  /* Tablet-specific fixes */
+  body {
+    padding-left: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .playlist-card {
+    width: 320px;
+    position: fixed;
+    height: calc(100vh - 96px);
+  }
+
+  .video-content {
+    margin-left: 340px;
+    max-width: calc(100% - 340px);
+  }
+
+  .searchbar-container {
+    width: 500px;
+    margin-right: 20px;
+    margin-top: 8px;
+  }
+
+  .selector-iframe {
+    width: 100%;
+    transform: scale(0.85);
+    margin-left: -10%;
+    margin-bottom: -90px;
+    height: 280px;
+  }
+
+  .header-content {
+    flex-wrap: nowrap;
+    height: 56px;
+  }
+
+  .red-btn, .discord-btn {
+    margin-left: 15px;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+
+  .youtube-iframe {
+    height: 380px;
+  }
+
+  .spotify-iframe {
+    height: 450px;
+  }
+}
 
 /* Medium Devices (tablets and small laptops) */
 @media (max-width: 1024px) {
@@ -594,7 +652,7 @@ nav {
   }
 
   .playlist-thumb {
-    height: 150px;
+    height: 200px;
   }
 
   .video-content {
@@ -629,7 +687,7 @@ nav {
   }
 
   .red-btn, .discord-btn {
-    margin-left: -10px;
+    margin-left: 10px;
     margin-top: 0;
   }
 
