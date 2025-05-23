@@ -616,33 +616,37 @@ nav {
 
   nav {
     position: fixed;
-    bottom: 0;
+    top: 56px;      /* below header */
     left: 0;
-    right: 0;
-    top: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 8px 0;
-    border-top: 1px solid var(--border-dark);
+    right: 0;       /* full width */
+    height: 56px;   /* typical nav bar height */
+    width: 100%;    /* full width */
+    padding: 0;     /* remove vertical padding */
+    background: #0f0f0f;
     border-right: none;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: row;  /* horizontal layout */
+    align-items: center;
+    justify-content: space-around; /* spread nav items evenly */
+    z-index: 90;
   }
-  
+
   .nav-item {
-    flex: 1;
-    padding: 8px 0;
+    flex-direction: row;   /* icon and label side by side */
+    padding: 0 12px;
   }
-  
+
   .nav-icon {
-    margin-bottom: 4px;
+    margin: 0 5px 0 0;   /* icon on left, small right margin */
+    font-size: 22px;     /* adjust size for mobile */
   }
 
-  .red-btn, .discord-btn {
-    display: none;
+  .nav-label {
+    font-size: 11px;     /* smaller label text */
   }
 
-  .logo{
+  .red-btn, .discord-btn, .logo{
     display: none;
   }
 
@@ -656,6 +660,7 @@ nav {
     position: static;
     width: 100%;
     height: auto;
+    margin-top: 50px; /* adjust the value as needed */
     margin-bottom: 24px;
     overflow-y: visible; /* avoid unnecessary scroll */
   }
@@ -774,6 +779,22 @@ nav {
   /* Adjust the iframe container padding */
   .selector-container {
     padding: 16px;
+  }
+
+ .search-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    display: block;
   }
 }
 
