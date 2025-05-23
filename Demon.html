@@ -608,83 +608,152 @@ nav {
 }
 }
 
-
-/* Small Devices (phones) */
 @media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px;
-    align-items: center;
+  body {
+    padding-left: 0;
+    padding-top: 56px;
   }
 
-  .logo-container {
-    order: 1;
-    flex: 1;
-  }
-
-  .logo-text {
-    font-size: 22px;
-  }
-
-  .header-buttons {
-    order: 2;
-    display: flex;
-    margin-left: auto;
-  }
-
-  .searchbar-container {
-    order: 3;
-    width: 100%;
-    margin-top: 10px;
-    margin-right: 0;
-    position: static;
+  nav {
+    
   }
 
   .red-btn, .discord-btn {
-    margin-left: 10px;
-    margin-top: 0;
-    display: inline-block;
-    padding: 8px 16px;
-    font-size: 13px;
+    display: none;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .content-container {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .playlist-card {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    overflow-y: visible; /* avoid unnecessary scroll */
+  }
+
+  .video-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .searchbar-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .searchbar-iframe {
+    width: 100%;
+  }
+
+  .review-text{
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .section-title, .selector-title, .video-title{
+    text-align: center;
+  }
+
+  .section-subtitle{
+    text-align: center;
+    margin-bottom: 9px;
+  }
+
+.promo-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .promo-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .promo-text {
+    flex-grow: 0;
+    margin-right: auto;
+  }
+
+  .promo-btn {
+    width: 100%;
+    order: 1; /* Force button to bottom */
+    text-align: center;
   }
 
   .selector-iframe {
-    height: 200px;
+    width: 100%;
+    transform: scale(1);
+    margin-left: 0;
+    margin-bottom: 0;
   }
 
-  .youtube-iframe {
-    height: 180px;
+  .red-btn,
+  .discord-btn {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
-  .spotify-iframe {
-    height: 280px;
-  }
-
-  .stars {
-    display: inline;
-    margin-left: 10px;
-  }
-
-  .playlist-title {
-    display: inline;
-  }
-
+  .review-section,
+  .selector-container,
   .video-container {
     padding: 16px;
   }
 
-  .promo-card {
-    padding: 12px;
+  .section-title::after,
+  .selector-title::after,
+  .video-title::after {
+    width: 200px;
+    bottom: 0;           /* adjust vertical position */
+    left: 50%;           /* start at 50% horizontally */
+    transform: translateX(-50%);
   }
-}
 
-/* High-resolution displays fix */
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-       screen and (min-resolution: 192dpi) {
-  .logo-cube::before {
-    transform: scale(1.1);
+    .playlist-title,
+  .stars,
+  .playlist-meta {
+    text-align: center;
+  }
+
+  .selector-iframe {
+    width: 100% !important;
+    transform: scale(1) !important;
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    height: 300px; /* Fixed height for mobile */
+    left: 0 !important;
+  }
+
+  .selector-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  /* Adjust the iframe container padding */
+  .selector-container {
+    padding: 16px;
   }
 }
 
@@ -771,7 +840,7 @@ nav {
     <div class="video-content">
       <!-- Promo Card -->
       <a href="#" class="promo-card">
-        <i class="fas fa-robot promo-icon">✨</i>
+        <span class="promo-icon">✨</span>
         <span class="promo-text">Check All Kdramas Rankings</span>
         <button class="promo-btn">Rankings</button>
       </a>
