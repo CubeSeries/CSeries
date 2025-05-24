@@ -614,6 +614,10 @@ nav {
     padding-top: 56px;
   }
 
+  #time, #times{
+    display: none;
+  }
+
   nav {
     position: fixed;
     top: 56px;      /* below header */
@@ -638,12 +642,12 @@ nav {
   }
 
   .nav-icon {
-    margin: 0 5px 0 0;   /* icon on left, small right margin */
+    margin: 0 6px 0 3px;   /* icon on left, small right margin */
     font-size: 22px;     /* adjust size for mobile */
   }
 
   .nav-label {
-    font-size: 11px;     /* smaller label text */
+    font-size: 12px;     /* smaller label text */
   }
 
   .red-btn, .discord-btn, .logo{
@@ -850,8 +854,8 @@ nav {
       <div class="nav-label">Actors</div>
     </a>
     <a href="index.html" class="nav-item">
-      <div class="nav-icon">⌛</div>
-      <div class="nav-label">Versions</div>
+      <div class="nav-icon" id="time">⌛</div>
+      <div class="nav-label" id="times">Versions</div>
     </a>
   </nav>
   
