@@ -733,7 +733,8 @@ nav {
     width: 100%;
     transform: scale(1);
     margin-left: 0;
-    margin-bottom: 0;
+    height: 50px; /* Adjust this value as needed */
+    margin-bottom: 0 !important; /* Remove the negative margin */
   }
 
   .red-btn,
@@ -745,8 +746,13 @@ nav {
   }
 
   .review-section,
-  .selector-container,
   .video-container {
+    padding: 16px;
+  }
+
+    .selector-container {
+    margin-bottom: 10px; /* Reduce from 28px */
+    padding-bottom: 10px; /* Add this to control inner spacing */
     padding: 16px;
   }
 
@@ -770,7 +776,7 @@ nav {
     transform: scale(1) !important;
     margin-left: 0 !important;
     margin-bottom: 0 !important;
-    height: 300px; /* Fixed height for mobile */
+    height: 160px; /* Fixed height for mobile */
     left: 0 !important;
   }
 
@@ -778,6 +784,7 @@ nav {
     grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
+    margin-bottom: 0; /* Remove any bottom margin */
   }
 
   /* Adjust the iframe container padding */
