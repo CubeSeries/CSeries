@@ -152,42 +152,75 @@ a.topic:hover {
   and (pointer: coarse) {
 
   body {
-    overflow-y: auto; /* Allow vertical scrolling on mobile */
+    overflow-y: auto;
   }
   
   .slid-carousel {
-    grid-auto-columns: calc(100% / 4); /* Show 4 cards at a time on tablets */
-    height: 500px; /* Adjust height for tablet */
+    /* 6 images per row with 5px gaps (5 gaps between 6 items) */
+    grid-auto-columns: calc((100% - 25px) / 6); /* 25px total gap (5 gaps × 5px) */
+    height: auto;
+    gap: 5px; /* Consistent 5px gap between items */
+    margin: 0 15px; /* Side space for arrows */
+    padding: 0;
+    overflow-x: auto; /* Ensure horizontal scrolling works */
+    scroll-snap-type: x mandatory; /* Smooth scrolling */
   }
   
   .slid-wrapper {
-    height: 75vh; /* Adjust wrapper height for tablet */
+    height: auto;
+    width: 100%;
+    padding: 0;
   }
   
   .slid-wrapper i {
-    height: 40px;
-    width: 40px;
-    font-size: 1rem;
-    line-height: 40px;
+    height: 32px;
+    width: 32px;
+    font-size: 0.85rem;
+    line-height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
   }
   
   .slid-wrapper i:first-child {
-    left: -15px;
+    left: -10px;
   }
   
   .slid-wrapper i:last-child {
-    right: -15px;
+    right: -10px;
+  }
+  
+  .slid-card {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 0; /* Prevent flexbox overflow issues */
   }
   
   .slid-card .slid-img {
-    aspect-ratio: 3 / 4; /* Adjust aspect ratio for mobile */
+    aspect-ratio: 2/3;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slid-card .slid-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   
   .slid-card a.topic {
-    font-size: 0.8rem; /* Smaller font size for mobile */
-    padding: 6px 10px;
+    font-size: 0.7rem;
+    padding: 3px 5px;
+    margin: 3px 0 0 0; /* Small top margin */
+  }
+
+  /* Adjust carousel height to fit content */
+  .slid-carousel {
+    height: 350px; /* Adjust based on your preference */
   }
 }
+
 
 /* Mobile styles (up to 767px) */
 @media only screen and (max-width: 767px) {
